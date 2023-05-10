@@ -123,6 +123,9 @@ describe("Given I am connected as an employee", () => {
     expect(handleSubmit).toHaveBeenCalled();
   });
 });
+
+
+
 // Suite de tests d'intégration pour les requêtes POST
 describe("Given I am a user connected as Employee and I am on NewBill page", () => {
   describe("When I submit the new bill", () => {

@@ -145,6 +145,9 @@ describe("Given I am connected as an employee", () => {
   });
 });
 
+
+
+// test d'intégration GET
 describe("Bills - getBills", () => {
   let mockStore;
   let mockDocument;
@@ -201,7 +204,7 @@ describe("Bills - getBills", () => {
   });
 });
 
-// test d'intégration GET
+
 describe("Given I am a user connected ", () => {
   describe("When I navigate into MainPage", () => {
     test("fetches bills from mock API GET", async () => {
