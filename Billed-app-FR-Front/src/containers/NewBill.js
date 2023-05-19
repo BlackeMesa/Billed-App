@@ -25,15 +25,15 @@ export default class NewBill {
     
      if (/^image\/(jpeg|jpg|png)$/.test(fileData.type)) {
 
-        console.log(e.target.value);
+        
        const filePath = e.target.value.split(/\\/g)
-       console.log(filePath);
+       
        const fileName = filePath[filePath.length-1]
        const formData = new FormData()
        const email = JSON.parse(localStorage.getItem("user")).email
        formData.append('file', fileData)
        formData.append('email', email)
-   console.log(fileName);
+   
        this.store
          .bills()
          .create({
@@ -43,7 +43,6 @@ export default class NewBill {
            }
          })
          .then(({fileUrl, key}) => {
-           console.log(fileUrl)
            this.billId = key
            this.fileUrl = fileUrl
            this.fileName = fileName
@@ -60,7 +59,6 @@ export default class NewBill {
   }
   handleSubmit = e => {
     e.preventDefault()
-    console.log('e.target.querySelector(`input[data-testid="datepicker"]`).value', e.target.querySelector(`input[data-testid="datepicker"]`).value)
     const email = JSON.parse(localStorage.getItem("user")).email
     const bill = {
       email,
